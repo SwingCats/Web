@@ -3,18 +3,44 @@
 <head>
     <title>Arizona Swing Cats</title>
     <link rel="stylesheet" type="text/css" href="Styles/Master.css" />
-    <script src="Scripts/jquery-2.1.3.js"></script>
+    <script src="Scripts/jquery-2.1.3.js">
+ 		var Hidden = false;
+		
+		$(document).ready(function(){
+			$('.TODO').hide();
+			resize();
+		})
+		
+		function resize(){
+			if($(window).width() < 900){
+				$('#Backlight').hide('slow')
+				Hidden = true;
+			}else if(Hidden){
+				$('#Backlight').show('slow')
+			}
+		}
+	</script>
 
 	
 	<!-- ///////////////////////////////// -->
 	
+	<link rel="stylesheet" type="text/css" href="Styles/Home.css">
+	<script>
+		$(document).ready(function(){
+			$('#Schedule table').hide()
+			var items = $('#Schedule table');
+			items
+		})
+	</script>
+	<!-- ///////////////////////////////// -->
+	
 </head>
 <body>
-    <div id="Backlight"></div>
     <div id="MainPanel">
+		<div id="Backlight" class="TODO"></div>
         <div id="grayBar">
         </div>
-        <div id="Banner">
+        <div id="Banner" class="TODO">
         </div>
         <div id="EditButton" class="TODO"></div>
         <div id="Menu">
@@ -33,9 +59,59 @@
         </div>
         <div id="ContentWrapper">
 		
+
+	<!-- ///////////////////////////////// -->
+	
+		<div id="Banner2">
+		</div>
+		<div id="Schedule" class="ContainerItem">
+			<h3>Schedule:</h3>
+			<div class="Indent">
+				<div>
+					<a>Tuesday - West Coast Swing</a>
+					<div class="TableContainer>
+						<Table>
+							<tr>
+								<td>Beginner:</td>
+								<td>6:00pm - 6:45pm</td>
+							</tr>
+							<tr>
+								<td>Intermediate</td>
+								<td>6:45pm - 7:30pm</td>
+							</tr>
+							<tr>
+								<td>Open Dance</td>
+								<td>7:30pm - 8:00pm</td>
+							</tr>
+						</Table>
+					</div>
+				<div>
+					<a>Thursday - Lindy Hop</a>
+					<div class="TableContainer>
+						<Table>
+							<tr>
+								<td>Beginner:</td>
+								<td>6:00pm - 6:45pm</td>
+							</tr>
+							<tr>
+								<td>Intermediate</td>
+								<td>6:45pm - 7:30pm</td>
+							</tr>
+							<tr>
+								<td>Open Dance</td>
+								<td>7:30pm - 8:00pm</td>
+							</tr>
+						</Table>
+					</div>
+				</div>
+			</div>
+		</div>	
+<!-- 		<div id="idk1" class="ContainerItem">
+		</div>
+		<div id="idk2" class="ContainerItem">
+		</div> -->
 	<!-- ///////////////////////////////// -->
 
-        </div>
     </div>
     <footer>
 		<div id="sponsors">

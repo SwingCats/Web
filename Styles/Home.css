@@ -1,0 +1,59 @@
+
+
+#Schedule, #idk1,
+#Banner2, #idk2{
+	float:left;
+}
+
+ #Schedule, #idk1{
+	width: 230px;
+	margin-bottom: 2px;
+}
+
+#Banner2, #idk2{
+	margin-right: 2px;
+	width: 737px;
+	margin-bottom: 2px;
+}
+
+#Banner2{
+	display: inline-block;
+	background-color: green;
+	height: 200px;
+ 	float:left;
+}
+#Schedule{
+	display: block;
+	float:left;
+	padding: 40px 15px 40px 15px;
+	font-style: italic;
+	font-size: 14px;
+}
+#Schedule h3{
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+#Schedule a{
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#schedule .TableContainer{
+	height: 190px;
+}
+#Schedule table{
+	display: block;
+	margin: 10px 0 10px 15px;
+}
+#idk1{
+	height: 100px;
+	padding: 0 20px 0 20px;
+}
+#idk2{
+	height: 200px;
+}
+
+.float-left{
+	display: block;
+	float:left;
+}
