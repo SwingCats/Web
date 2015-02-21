@@ -1,5 +1,10 @@
+
 body{
-	background-color: black;
+	background: url(../Images/002.jpg)center;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-ms-background-size: 100% auto;
+	-o-background-size: 100% auto;
 }
 
 #MainPanel{	
