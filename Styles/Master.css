@@ -1,92 +1,101 @@
 
+
 body{
-	background: url(../Images/002.jpg)center;
+	background: 
+		url(../Images/002b.jpg) no-repeat center,
+		url(../Images/001BackgroundEcho.jpg) repeat center;
 	-webkit-background-size: 100% auto;
 	-moz-background-size: 100% auto;
 	-ms-background-size: 100% auto;
 	-o-background-size: 100% auto;
 }
 
-#MainPanel{	
+ #MainPanel{	
 	position: relative;
-	width: 1000px;
-/* 	color: E0E0EE;
- */	display: block;
-	padding-left: 50px;
-	padding-right: 50px;
-	
-	margin: 100px auto 2px auto;
-}
-#Backlight{
-	position: absolute;
-	min-width: 1200px;
-	top: -150px;
-	left: -200px;
-	height: 600px;
-	margin-left: auto;
-	margin-right: auto;
-
-	background: -webkit-radial-gradient(red,red, black, black); /* Safari 5.1 to 6.0 */
-	background: -o-radial-gradient(red,red, black, black); /* For Opera 11.6 to 12.0 */
-	background: -moz-radial-gradient(red,red, black, black); /* For Firefox 3.6 to 15 */
-	background: radial-gradient(#FF0000,#aa0000, black, black); /* Standard syntax */
-	
-	z-index: -2;
+	width: 80em;
+ 	display: block;
+	margin: 2em auto 5em auto;
 }
 
-#Banner{
-	/* display: block; */
-	background-color: green;
-	Height: 150px;
-	width: 100%;
-}
-
-
-#Menu{
-	color: #d9d9c9;
-	height: 25px;
-	background-color: #292F68;
-	margin-bottom: 2px;
-}
-
-#Menu table {
-	margin:0 ;
-}
-
-#Menu td{
-	height: 100%;
-	margin: 0 50px 0 50px;
-	padding:0;
-	width:200px;
-	text-align:center;
-	cursor:pointer;
-}
-
-#Menu td:hover{
-	background-color: #15194a;
-}
-
-#ContentWrapper{
-
-	color: white;
+#Menu {
 	display: block;
+	position: absolute;
+	float: right;
+	z-index: 5;
+	top: 1em;
+	right: 0;
+	width: 95%;
+	mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 25%, rgba(255, 255, 255, 0.6) 100%);
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 25%, rgba(255, 255, 255, 0.6) 100%);
+	margin: 0;
+}
+ 
+#Menu ul {
+	margin: 0 5em;
+	float: right;
+}
+ 
+#Menu ul li {
+  display: inline-block;
+}
+
+#Menu ul li a {
+  padding: .5em 2em;
+  color: rgba(0, 0, 0, 0.75);
+  text-shadow: .05em .05em .05em rgba(200, 200, 200, 0.4);
+  font-size: 1.2em;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#Menu ul li a:hover {
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(200, 200, 180, 0.6); */
+  background: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
+}
+ 
+#ContentWrapper{
+	display: block;
+	float:left;
 	width:100%;
-	height: 400px;
+	z-index: 1;
 }
-.ContainerItem{
-	background-color: #424253;
+
+.ContainerItemLeft, .ContainerItemRight{
+	color: rgba( 170, 170, 120, 1);
 }
-.Indent{
-	margin-left: 25px;
+
+.ContainerItemLeft{
+	margin-right: 0.1em;
+	background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 1) 25%, rgba(255, 255, 255, 1) 100%); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(45deg, rgba(0, 0, 0, 1) 25%, rgba(255, 255, 255, 1) 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 1) 25%, rgba(255, 255, 255, 1) 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(45deg, rgba(0, 0, 0, 1) , rgba(50, 50, 50, 1) 75%); /* Standard syntax */
+}
+.ContainerItemRight{
+	background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 1) 25%, rgba(255, 255, 255, 1) 100%); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(-45deg, rgba(0, 0, 0, 1) 25%, rgba(255, 255, 255, 1) 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 1) 25%, rgba(255, 255, 255, 1) 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(-45deg, rgba(0, 0, 0, 1) , rgba(50, 50, 50, 1) 75%); /* Standard syntax */
 }
 
 footer{
-margin-bottom: 40px;
+	color: #AABBAA;
+	margin-bottom: 40px;
 }
 	
-.TODO{
+#copyRight p{
+	float: left;
+	margin: 2em 0 2em 0;
+}
+	
+
+ 
+#Menu ul li.TODO{
 	display:none;
 }
+
 
 
 

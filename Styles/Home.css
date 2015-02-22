@@ -1,56 +1,100 @@
 
 
-#Schedule, #idk1,
-#Banner2, #idk2{
-	float:left;
-}
-
- #Schedule, #idk1{
-	width: 230px;
-	margin-bottom: 2px;
-}
-
-#Banner2, #idk2{
-	margin-right: 2px;
-	width: 737px;
-	margin-bottom: 2px;
-}
-
-#Banner2{
-	display: inline-block;
-	background-color: green;
-	height: 200px;
+#MainPic{
+	display: block;
  	float:left;
+	width: 100%;
+	height: 32em;
+	margin-bottom: .2em;
 }
+#slider-wrapper{
+	display: block;
+ 	float:left;
+	width: 100%;
+	margin-bottom: .2em;
+}
+
+#slider{
+	z-index: 2;
+}
+
+#TimeAndPlace{
+	position: relative;
+	float: left;
+	display:block;
+	width: 100%;
+	height: 15.5em;
+}
+
+ #Schedule, #Location{
+	height: 100%;
+}
+
 #Schedule{
 	display: block;
 	float:left;
-	padding: 40px 15px 40px 15px;
 	font-style: italic;
-	font-size: 14px;
+	font-size: .9em;
+	width: 57em;
+	text-align: center;
 }
+
+#SchedulePaddingDiv{
+	display: block;
+	float:left;
+	width: 100%;
+	margin-top: 3.5em;
+}
+
 #Schedule h3{
-	margin-top: 0px;
-	margin-bottom: 10px;
+	margin-top: 0;
+	margin-bottom: .8em;
+	text-decoration: underline;
 }
+
 #Schedule a{
 	display: block;
 	font-weight: bold;
-	margin-bottom: 10px;
+	margin-bottom: .2em;
 }
-#schedule .TableContainer{
-	height: 190px;
-}
-#Schedule table{
+
+#Schedule div.ScheduleItemContainer{
 	display: block;
-	margin: 10px 0 10px 15px;
+	float: left;
+	margin-right: 3.2em;
 }
-#idk1{
-	height: 100px;
-	padding: 0 20px 0 20px;
+
+div.Indent{
+	display: block;
+	float: left;
+	margin-left: 11.5em;;
 }
-#idk2{
-	height: 200px;
+
+#Schedule table{
+	margin: .8em 0 .8em 1.8em;
+}
+
+#Location{
+	text-align: center;
+	margin-left: 51.4em;
+}
+
+#map-canvas{
+	height: 14.5em;
+	width: 14.5em;
+	float: right;
+	margin: .5em;
+}
+
+#GLocation{
+	margin-top: 3em;
+	float: left;
+	width: 13em;
+	text-decoration: underline;
+}
+#GLocation a{
+	margin-bottom: .25em;
+	display: block;
 }
 
 .float-left{

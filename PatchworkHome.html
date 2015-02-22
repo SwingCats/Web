@@ -3,114 +3,146 @@
 <head>
     <title>Arizona Swing Cats</title>
     <link rel="stylesheet" type="text/css" href="Styles/Master.css" />
-    <script src="Scripts/jquery-2.1.3.js">
- 		var Hidden = false;
-		
-		$(document).ready(function(){
-			$('.TODO').hide();
-			resize();
-		})
-		
-		function resize(){
-			if($(window).width() < 900){
-				$('#Backlight').hide('slow')
-				Hidden = true;
-			}else if(Hidden){
-				$('#Backlight').show('slow')
-			}
-		}
+    <script src="Scripts/jquery-2.1.3.js" />
+ 	<script type="text/javascript">
 	</script>
 
 	
 	<!-- ///////////////////////////////// -->
 	
-	<link rel="stylesheet" type="text/css" href="Styles/Home.css">
-	<script>
-		$(document).ready(function(){
-			//$('#Schedule table').hide()
-			//var items = $('#Schedule table');
-			//items.
+	<link rel="stylesheet" type="text/css" href="Styles/Home.css"/>
+	<link rel="stylesheet" type="text/css" href="Styles/responsiveslides.css"/>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="Scripts/responsiveslides.min.js"></script>
+	<script type="text/javascript">
+		var lat = 32.234673;
+		var lang = -110.951359;
+		var LocationName = "Pima Hall"
+	
+		function init() {
+		  var myLatlng = new google.maps.LatLng(lat, lang);
+		  var mapOptions = {
+			zoom: 15,
+			center: myLatlng
+		  }
+		  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+		  var marker = new google.maps.Marker({
+			  position: myLatlng,
+			  map: map,
+			  title: LocationName
+		  });
+		}		
+		google.maps.event.addDomListener(window, 'load', init);
+		
+		$(function() {
+	    $(".rslides").responsiveSlides({
+				speed: 2000,
+				timeout: 13000,
+				manualControls: '#slider-pager',
+			});
 		});
+		
 	</script>
 	<!-- ///////////////////////////////// -->
 	
 </head>
 <body>
     <div id="MainPanel">
-		<!-- <div id="Backlight" class="TODO"></div> -->
         <div id="grayBar">
         </div>
         <div id="Banner" class="TODO">
         </div>
-        <div id="EditButton" class="TODO"></div>
+        <!-- <div id="EditButton" class="TODO"></div> -->
         <div id="Menu">
-            <table>
-                <tr>
-                    <td><a>Home</a></td>
-                    <td><a>Info</a></td>
-                    <td><a>Calendar</a></td>
-                    <td><a>History</a></td>
-                    <td class="TODO"><a>Officers</a></td>
-                    <td><a>Contact Us</a></td>
-                    <td class="TODO"><a>Related Links</a></td>
-                    <td class="TODO"><a>Donations</a></td>
-                </tr>
-            </table>
+			<ul>
+				<li><a href="PatchworkHome.html">Home</a></li>
+				<li><a href="PatchworkHome.html">Info</a></li>
+				<li><a href="">Calendar</a></li>
+				<li class="TODO"><a>History</a></li>
+				<li class="TODO"><a>Officers</a></li>
+				<li class="TODO"><a>Contact Us</a></li>
+				<li><a href="https://www.youtube.com/channel/UCAwdjF7FuLrO_P1doZVoj_A">Videos</a></li>
+				<li class="TODO"><a>Related Links</a></li>
+				<li class="TODO"><a>Donations</a></li>
+			</ul>
         </div>
         <div id="ContentWrapper">
 		
 
 	<!-- ///////////////////////////////// -->
 	
-		<div id="Banner2">
+		<div id="slider-wrapper">
+			<ul class="rslides" id="slider">
+			  <li><img src="Images/Banner/DSC_0092.jpg" alt=""></li>
+			  <li><img src="Images/Banner/DSC_0045.jpg" alt=""></li>
+			  <li><img src="Images/Banner/DSC_0033.jpg" alt=""></li>
+			  <li><img src="Images/Banner/DSC_0119.jpg" alt=""></li>
+			</ul>
+			<ul id="slider-pager">
+			  <li><a href="#"><img src="Images/Banner/DSC_0092.jpg" alt=""></a></li>
+			  <li><a href="#"><img src="Images/Banner/DSC_0045.jpg" alt=""></a></li>
+			  <li><a href="#"><img src="Images/Banner/DSC_0033.jpg" alt=""></a></li>
+			  <li><a href="#"><img src="Images/Banner/DSC_0119.jpg" alt=""></a></li>
+			</ul>
 		</div>
-		<div id="Schedule" class="ContainerItem">
-			<h3>Schedule:</h3>
-			<div class="Indent">
-				<div>
-					<a>Tuesday - West Coast Swing</a>
-					<div class="TableContainer">
-						<Table>
-							<tr>
-								<td>Beginner:</td>
-								<td>6:00pm - 6:45pm</td>
-							</tr>
-							<tr>
-								<td>Intermediate</td>
-								<td>6:45pm - 7:30pm</td>
-							</tr>
-							<tr>
-								<td>Open Dance</td>
-								<td>7:30pm - 8:00pm</td>
-							</tr>
-						</Table>
+	
+		<!-- <img id="MainPic" src="Images/Banner/DSC_0119.jpg" /> -->
+		<div id="TimeAndPlace">
+			<div id="Schedule" class="ContainerItemLeft">
+				<div id="SchedulePaddingDiv">
+					<h3>Class Schedule</h3>
+					<div class="Indent">
+						<div class="ScheduleItemContainer">
+							<a>Tuesday - West Coast Swing</a>
+							<div>
+								<Table>
+									<tr>
+										<td>Beginner:</td>
+										<td>6:00pm - 6:45pm</td>
+									</tr>
+									<tr>
+										<td>Intermediate</td>
+										<td>6:45pm - 7:30pm</td>
+									</tr>
+									<tr>
+										<td>Open Dance</td>
+										<td>7:30pm - 8:00pm</td>
+									</tr>
+								</Table>
+							</div>
+						</div>
+							<div class="ScheduleItemContainer">
+								<a>Thursday - Lindy Hop</a>
+								<div class="TableContainer">
+									<Table>
+										<tr>
+											<td>Beginner:</td>
+											<td>6:00pm - 6:45pm</td>
+										</tr>
+										<tr>
+											<td>Intermediate</td>
+											<td>6:45pm - 7:30pm</td>
+										</tr>
+										<tr>
+											<td>Open Dance</td>
+											<td>7:30pm - 8:00pm</td>
+										</tr>
+									</Table>
+							</div>
+						</div>
 					</div>
+				</div>	
+			</div>	
+			<div id="Location" class="ContainerItemRight">
+				<div id="GLocation">
+					<h5>Location<h5>
+					<a>1340 E. First Street</a>
+					<a>Tucson, AZ 85719</a>
 				</div>
-					<div>
-						<a>Thursday - Lindy Hop</a>
-					<div class="TableContainer">
-							<Table>
-								<tr>
-									<td>Beginner:</td>
-									<td>6:00pm - 6:45pm</td>
-								</tr>
-								<tr>
-									<td>Intermediate</td>
-									<td>6:45pm - 7:30pm</td>
-								</tr>
-								<tr>
-									<td>Open Dance</td>
-									<td>7:30pm - 8:00pm</td>
-								</tr>
-							</Table>
-					</div>
-				</div>
+				<div id="map-canvas"></div>
 			</div>
-		</div>	
-<!-- 		<div id="idk1" class="ContainerItem">
 		</div>
-		<div id="idk2" class="ContainerItem">
-		</div> -->
 	<!-- ///////////////////////////////// -->
 
     </div>
@@ -118,10 +150,8 @@
 		<div id="sponsors">
 			
 		</div>
-        <div class="content-wrapper">
-            <div>
-                <p>&copy; 1/25/2015 - Swing Cats</p>
-            </div>
+        <div id="copyRight">
+            <p>&copy; 1/25/2015 - Swing Cats</p>
         </div>
     </footer>
 </body>
