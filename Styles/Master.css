@@ -4,11 +4,16 @@ body{
     background-image: url("../Images/001BackgroundEcho.jpg");
 }
 
+H1{
+	display: block;
+	color: #5555CC;	margin-left: 316px;	margin-bottom: 0px;
+}
+
  #MainPanel{	
 	position: relative;
 	width: 80em;
  	display: block;
-	margin: 2em auto 5em auto;
+	margin: 5px auto 5em auto;
 }
 
 #Menu {
