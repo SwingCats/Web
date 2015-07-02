@@ -1,13 +1,7 @@
 
 
 body{
-	background: 
-		url(../Images/002b.jpg) no-repeat center,
-		url(../Images/001BackgroundEcho.jpg) repeat center;
-	-webkit-background-size: 100% auto;
-	-moz-background-size: 100% auto;
-	-ms-background-size: 100% auto;
-	-o-background-size: 100% auto;
+    background-image: url("../Images/001BackgroundEcho.jpg");
 }
 
  #MainPanel{	
