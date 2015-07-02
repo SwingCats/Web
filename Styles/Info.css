@@ -1,0 +1,41 @@
+#mainBody{
+	color: #AABBAA;
+	/*color:  rgb( 170, 170, 120); */
+	line-height: 26px;
+}
+
+h2{
+	margin-top: 100px;
+	text-align: center;
+}
+.itemHeader{
+	margin-left: 40px;
+}
+
+.itemHeader, h2{
+	text-decoration: underline;
+	color: rgb( 170, 170, 120)
+}
+
+#mainBody{
+	margin-top: 40px;
+}
+
+.section{
+	margin-top: 80px;
+}
+
+p{
+	text-indent: 40px;
+}
+
+.highlight{
+	color: rgb( 50, 50, 200);
+}
+
+
+
+
+#copyrightPadder{
+	margin-bottom: 80px;
+}

@@ -13,9 +13,45 @@
 	width: 100%;
 	margin-bottom: .2em;
 }
-
 #slider{
 	z-index: 2;
+}
+
+#pagerWindow{
+  position: relative;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  width: 1200px;
+  height: 120px;
+  overflow: hidden;
+}
+
+#slider-pager{
+	position:absolute;
+	padding: 5px;
+}
+ 
+#leftArrow, 
+#rightArrow{
+	margin-top:30px;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent; 
+	
+	width: 0; 
+	height: 0; 
+}
+
+#leftArrow{
+	float:left;
+	border-right: 30px solid rgb(220,220,220); 
+	margin-right: -16px;
+}
+
+
+#rightArrow{	
+	float:right;
+	border-left: 30px solid  rgb(220,220,220); 
 }
 
 #TimeAndPlace{
@@ -62,6 +98,10 @@
 	display: block;
 	float: left;
 	margin-right: 3.2em;
+}
+#Schedule #disclaimer{
+	float:left;
+	margin-top: 55px;
 }
 
 div.Indent{

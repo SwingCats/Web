@@ -37,7 +37,8 @@
 			  map: map,
 			  title: 'Koffler Building'
 		  });
-		}		
+		}
+		
 		google.maps.event.addDomListener(window, 'load', init);
 		
 		$(function() {
@@ -47,6 +48,44 @@
 				manualControls: '#slider-pager',
 			});
 		});
+	
+		$(document).ready(function(){
+			var strip = $('#slider-pager');
+			strip.width(strip.children().length * strip.children().first().width() + 100);
+			$('#leftArrow').hide(0);
+			$('#leftArrow').click(function(){
+				shiftSlider(-1)
+			})
+			$('#rightArrow').click(function(){
+				shiftSlider(1)
+			})
+		});
+		var index = 0
+		function shiftSlider(offset){
+			
+			index += offset;
+			var window = $('#pagerWindow');
+			var slider = $('#slider-pager');
+			var imgUnit = slider.find(":nth-child("+index+")").width() + 2;
+			
+			var newPosition = -(imgUnit * index);
+			
+			slider.animate({
+				left : newPosition
+			}, 400);
+			
+			if(index == 0){
+				$('#leftArrow').hide();
+			}else{
+				$('#leftArrow').show();
+			}
+			var display = Math.floor(window.width() / slider.children().first().width());
+			if(index + display == slider.children().length -1){
+				$('#rightArrow').hide();
+			}else{
+				$('#rightArrow').show();
+			}
+		}
 		
 	</script>
 	<!-- ///////////////////////////////// -->
@@ -62,7 +101,7 @@
         <div id="Menu">
 			<ul>
 				<li><a href="PatchworkHome.html">Home</a></li>
-				<li><a href="PatchworkHome.html">Info</a></li>
+				<li><a href="info.html">Info</a></li>
 				<li><a href="">Calendar</a></li>
 				<li class="TODO"><a>History</a></li>
 				<li class="TODO"><a>Officers</a></li>
@@ -80,7 +119,6 @@
 			
 		<div id="slider-wrapper">
 			<ul class="rslides" id="slider">
-			
 				<li><img src="Images/Banner/img1.jpg" alt=""></li>
 				<li><img src="Images/Banner/img2.jpg" alt=""></li>
 				<li><img src="Images/Banner/img3.jpg" alt=""></li>
@@ -90,20 +128,24 @@
 				<li><img src="Images/Banner/img7.jpg" alt=""></li>
 				<li><img src="Images/Banner/img8.jpg" alt=""></li>
 				<li><img src="Images/Banner/img8.jpg" alt=""></li>
-
 			</ul>
-			<ul id="slider-pager">
-
-				<li><a href="#"><img src="Images/Banner/img1.jpg" alt=""></li>
-				<li><a href="#"><img src="Images/Banner/img2.jpg" alt=""></li>
-				<li><a href="#"><img src="Images/Banner/img3.jpg" alt=""></li>
-				<li><a href="#"><img src="Images/Banner/img4.jpg" alt=""></li>
-				<li><a href="#"><img src="Images/Banner/img5.jpg" alt=""></li>
-				<li><a href="#"><img src="Images/Banner/img6.jpg" alt=""></li>
-				<li><a href="#"><img src="Images/Banner/img7.jpg" alt=""></li>
-				<li><a href="#"><img src="Images/Banner/img8.jpg" alt=""></li>
-			</ul>
+				<div id="leftArrow"></div>
+			<div id="pagerWindow">
+				<ul id="slider-pager">
+					<li><a href="#"><img src="Images/Banner/img1.jpg" alt=""></a></li>
+					<li><a href="#"><img src="Images/Banner/img2.jpg" alt=""></a></li>
+					<li><a href="#"><img src="Images/Banner/img3.jpg" alt=""></a></li>
+					<li><a href="#"><img src="Images/Banner/img4.jpg" alt=""></a></li>
+					<li><a href="#"><img src="Images/Banner/img5.jpg" alt=""></a></li>
+					<li><a href="#"><img src="Images/Banner/img6.jpg" alt=""></a></li>
+					<li><a href="#"><img src="Images/Banner/img7.jpg" alt=""></a></li>
+					<li><a href="#"><img src="Images/Banner/img8.jpg" alt=""></a></li>
+				</ul>
+			</div>
+				<div id="rightArrow"></div>
 		</div>
+			
+	
 	
 		<!-- <img id="MainPic" src="Images/Banner/DSC_0119.jpg" /> -->
 		<div id="TimeAndPlace">
@@ -130,26 +172,27 @@
 								</Table>
 							</div>
 						</div>
-							<div class="ScheduleItemContainer">
-								<a>Thursday - Lindy Hop</a>
-								<div class="TableContainer">
-									<Table>
-										<tr>
-											<td>Beginner:</td>
-											<td>6:00pm - 6:45pm</td>
-										</tr>
-										<tr>
-											<td>Intermediate</td>
-											<td>6:45pm - 7:30pm</td>
-										</tr>
-										<tr>
-											<td>Open Dance</td>
-											<td>7:30pm - 8:00pm</td>
-										</tr>
-									</Table>
+						<div class="ScheduleItemContainer">
+							<a>Thursday - Lindy Hop</a>
+							<div class="TableContainer">
+								<Table>
+									<tr>
+										<td>Beginner:</td>
+										<td>6:00pm - 6:45pm</td>
+									</tr>
+									<tr>
+										<td>Intermediate</td>
+										<td>6:45pm - 7:30pm</td>
+									</tr>
+									<tr>
+										<td>Open Dance</td>
+										<td>7:30pm - 8:00pm</td>
+									</tr>
+								</Table>
 							</div>
 						</div>
 					</div>
+					<div id="disclaimer">There are no class over summer break</div>
 				</div>	
 			</div>	
 			<div id="Location" class="ContainerItemRight">
