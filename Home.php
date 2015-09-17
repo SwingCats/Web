@@ -87,7 +87,7 @@
 		
 
 	<!-- ///////////////////////////////// -->
-	
+	<!--  -->
 
 		<div id="slider-wrapper">
 			<ul class="rslides" id="slider">
