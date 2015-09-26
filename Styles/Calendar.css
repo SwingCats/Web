@@ -1,0 +1,56 @@
+#MainBody{	
+	padding: 100px 20px 5px;
+	margin-top: -17px;	
+	width: 95%;  	
+	background: -webkit-Radial-gradient(rgba(50, 50, 50, 1) 15%, rgba(20, 20, 20, 1)50%, rgba(0, 0, 0, .75)); /* For Safari 5.1 to 6.0 */	
+	background: -o-Radial-gradient(rgba(50, 50, 50, 1) 15%, rgba(20, 20, 20, 1)50%, rgba(0, 0, 0, .75)); /* For Opera 11.1 to 12.0 */	background: -moz-Radial-gradient(rgba(50, 50, 50, 1) 15%, rgba(20, 20, 20, 1)50%, rgba(0, 0, 0, .75)); /* For Firefox 3.6 to 15 */	
+	background: Radial-gradient(rgba(50, 50, 50, 1) 30%, rgba(20, 20, 20, 1) 60%, rgba(0, 0, 0, 0)); /* Standard syntax */
+	color: #B8CDC9;
+}
+	
+h2{	
+    display: block;
+    color: #5555CC;
+	margin-top: 0;	
+	text-align: center;
+}
+
+.itemHeader{	
+	margin-left: 40px;
+}
+.itemHeader, h2{	
+	text-decoration: underline;	
+}
+.section{	
+	margin-bottom: 80px;
+}
+p{	
+	text-indent: 40px;
+}
+
+#copyrightPadder{	
+	margin-bottom: 80px;
+}
+
+.dayTitle{
+	color: rgb(228, 190, 0);	/*color:  rgb( 170, 170, 120); */	
+	line-height: 26px;	
+}
+
+.dayDiv{
+	margin-top: 40px;
+	margin-left: 60px;
+	margin-bottom: 30px;
+}
+
+.eventItem{
+	margin-left: 120px;
+}
+
+.dayTitle{
+	margin-left: 60px;
+}
+.important{
+	margin-left: 10px;
+	color: #FF4444;
+}
